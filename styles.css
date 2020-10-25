@@ -1,0 +1,56 @@
+html {
+  font-family: Arial, sans-serif;
+  font-size: 125%;
+  hyphens: auto;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+header[role=banner],
+main[role=main],
+nav[role=navigation],
+footer[role=contentinfo] {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 33rem;
+}
+
+header[role=banner] {
+  text-align: center;
+}
+
+nav[role=navigation] {
+  text-align: center;
+}
+
+nav[role=navigation] a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+footer[role=contentinfo] {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+a[href] {
+  color: #3344dd;
+  text-decoration: none;
+}
+
+a[href]:hover,
+a[href]:focus,
+a[href]:active {
+  color: #bb1122;
+  text-decoration: underline;
+}
+
+a[href]:visited {
+  color: #884488;
+}
+
+.conspicuous {
+  font-style: italic;
+  font-weight: bold;
+}
