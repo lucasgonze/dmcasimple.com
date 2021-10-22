@@ -22,20 +22,84 @@
     <p>standard copyright policy for websites</p>
   </header>
   <nav role="navigation">
-    <a href="1e">Read</a> <a href="use">Use</a> <a href="feedback">Feedback</a>
+    <a href="1e">Read</a> <a href="use">Use</a> <a href="feedback">Feedback</a> <a href="statute">Statute</a>
   </nav>
   <main role="main">
     <h1>How to Use DMCASimple</h1>
-    <p class="conspicuous">It’s up to you to read through the policy and make sure its works for your website and your needs. Nobody provides any kind of guarantee that the policy will work, or work for you. Using DMCASimple certainly <a href="https://notlegaladvice.law">doesn’t make any of the lawyers or other people who’ve contributed professionally responsible to you</a>.</p>
-    <p>To use DMCASimple as the copyright policy for your website, create a copyright policy page with content based on this template, and link to it from the bottom of every page of your site. Make sure to replace all the {placeholders}.</p>
+    <p class="conspicuous">The DMCA Safe Harbor is a legal thing. Best case, you should find a lawyer who can ask about your situation and give you tailored advice. Contributors to this website, on the other hand, <a href="https://notlegaladvice.law">won’t be professionally responsible to you</a>, even if they practice law.</p>
+    <p>The United States <a href="https://en.wikipedia.org/wiki/Online_Copyright_Infringement_Liability_Limitation_Act">Online Copyright Infringement Liability Limitation Act</a>, which was passed as of the <a href="https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act">Digital Millennium Copyright Act</a>, offers online service providers protection or “safe harbor” from some claims of copyright infringement. To get that protection, you need to meet the DMCA’s requirements:</p>
+    <ol>
+      <li>Qualify as an online “service provider” <a href=/statute#k1>as defined in the law</a>.</li>
+      <li>Register <a href=/statute#c2>an agent</a> to receive copyright claims <a href="https://www.copyright.gov/dmca-directory/">through the United States Copyright Office</a>.</li>
+      <li>Publish a policy, <a href=/1e>like DMCASimple</a>, about how you will handle copyright claims and repeat infringers.</li>
+      <li>Follow your policy, as well as the law, when handling copyright claims.</li>
+      <li>Not interfere with <a href=/statute#i2>“standard technical measures”</a> that copyright owners use to identify and protect their rights.</li>
+    </ol>
+    <p>To use DMCASimple as the copyright policy for your website, create a copyright policy page with content based on the following template and link to it from the bottom of every page of your site. Make sure to replace all the {placeholders}.</p>
     <blockquote>
       We follow the DMCASimple copyright policy at <a href="https://dmcasimple.com/1e">https://dmcasimple.com/1e</a>.
       <p>The <dfn>website</dfn> is {address of your website, e.g. example.com}.</p>
       <p>The <dfn>operator</dfn> is {name of the person or company behind your website, e.g. "John Doe, resident of California" or "SomeCo, Inc., a New York corporation"}.</p>
       <p>Our <dfn>agent</dfn> is {e.g. "Able Agent, 123 Main Street, Oakland, CA 12345, agent@example.com, 555-555-5555"}.</p>
     </blockquote>
-    <p>The first paragraph uses a legal technique called <a href="https://en.wikipedia.org/wiki/Incorporation_by_reference">incorporation by reference</a>.</p>
-    <p>The later paragraphs provide information that the policy needs to work.</p>
+    <p>The first paragraph uses a legal technique called <a href="https://en.wikipedia.org/wiki/Incorporation_by_reference">incorporation by reference</a>. The later paragraphs provide information that the policy needs to work.</p>
+
+    <hr> 
+<h3 id="setup">Setup</h3>
+<ol>
+<li>Formal Steps Required for DMCA Compliance<ol>
+<li>Get an email address just for DMCA complaints</li>
+<li>Register an agent with the US Copyright Office. See <a href="http://copyright.gov/onlinesp">http://copyright.gov/onlinesp</a></li>
+<li>Publish notice about how to reach you to file a takedown request<ol>
+<li>Put a link in a site-wide footer</li>
+<li>At that link put the contact information from your registration with the US Copyright office</li>
+<li>In your terms of service document reserve the right to take down content and disconnect accounts. State that you have a policy of disconnecting repeat infringers.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Get lawyer input and create legal policies<ol>
+<li>When to count a complaint as an infringement for the purpose of disconnecting repeat infringers. (default: always)</li>
+<li>How many infringements are enough to disconnect a repeat infringer? (default: two)</li>
+<li>When to decrement the infringement count for an repeat infringer (default: never)</li>
+<li>Time limit for responding to a notice (default: one day)</li>
+<li>Vet the guidance in this document</li>
+</ol>
+</li>
+<li>Figure out the technology to<ol>
+<li>Disable and re-enable access to content</li>
+<li>Get email address of account which owns a link you host</li>
+<li>Disable and re-enable an account</li>
+<li>Track repeat infringements</li>
+</ol>
+</li>
+</ol>
+<h3 id="when-a-complaint-arrives">When a Complaint Arrives</h3>
+<p>When a notice of alleged infringement arrives from the copyright owner or their agent, via email, snail mail, or fax...</p>
+<ol>
+<li>Verify that all required fields (see &quot;Required fields for notices of alleged infringement&quot;) are filled in and the values make sense. If not, reject the notification.</li>
+<li>Verify that the request contains enough information to figure out where in the web site (or app) the alleged infringement is occurring. If not, reject the notificaiton.</li>
+<li>Disable access to the content. Take care to not damage it in a way that prevents you from re-enabling access..</li>
+<li>Inform the user that you have taken down the content. Inform them of their right to file a counter notice and give them a pointer to info on doing them. Here is an example from Github: <a href="https://help.github.com/articles/guide-to-submitting-a-dmca-counter-notice/">https://help.github.com/articles/guide-to-submitting-a-dmca-counter-notice/</a></li>
+<li>Increment the infringement count for the user</li>
+<li>Look up the infringement count for the user. If it is greater than the maximum, disconnect the users account.</li>
+</ol>
+<h3 id="counter-notice">Counter-Notice</h3>
+<p>When a counter-notice arrives from the user/uploader, inbound via email, snail mail, or fax...</p>
+<ol>
+<li>Verify that the three day window has not expired. If it has expired, reject the counter-notice.</li>
+<li>Verify that all the fields are filled in and the values are correct. (DMCA Section 512(g)(1) is the canonical source of info. See <a href="http://www.copyright.gov/title17/92chap5.html#512">http://www.copyright.gov/title17/92chap5.html#512</a>)</li>
+<li>Forward the counter notice to the copyright owner.</li>
+<li>Set a ten-day timer to put back the content if the copyright owner has not filed suit against the user and informed you.</li>
+<li>Consider decrementing the infringement counter for this user.</li>
+</ol>
+<h3 id="ten-day-timer">Ten-Day Timer</h3>
+<p>When the ten-day timer goes off...</p>
+<ol>
+<li>Verify that you have not received a notice that the copyright owner has filed a lawsuit. If not, put back the content and (if you haven&#39;t already) decrement your repeat infringement counter.</li>
+</ol>
+
+
   </main>
   <footer role="contentinfo">
     <p>a <a href="https://stonecutters.law">Stonecutters</a> project</p>
